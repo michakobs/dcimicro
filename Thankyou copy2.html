@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Prompt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+    <style>
+        body {
+
+            animation: rainbow 1s infinite;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: top center;
+            margin: 0;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+        }
+
+        div {
+            overflow: hidden;
+        }
+        
+        h3{
+            font-size: 20px;
+            font-family: 'Caveat', cursive;
+            text-align: center;
+            margin-top: 0px
+        }
+
+            
+        .map {
+            position: absolute;
+            padding: 15px;
+            border: 3px solid black;
+            height: 300px;
+            width: 300px;
+            background-color: #fff;
+            z-index: +2 ;
+            bottom: -290px; left: 5vw;
+            animation: map 25s infinite;
+        }
+        
+        .map:hover{
+            z-index: +9 ;
+            
+        }
+        
+        @keyframes map {
+            0% {top: -50vh; left: 15vw;}
+            20% {top: 55vh; left: 15vw;}
+            50% {top: 20vh; left: 15vw;}        
+            80% {top: 20vh; left: -200vw;}
+            100% {top: -50vh; left: -200vw;}
+        }
+        
+        .me {
+            position: absolute;
+            padding: 15px;
+            border: 3px solid black;
+            height: 400px;
+            width: 300px;
+            background-color: #fff;
+            z-index: +3 ;
+            bottom: 10vh; right: -50vw;
+            animation: me 23s infinite;
+        }
+        
+        .me:hover{
+            z-index: +9 ;
+            
+        }
+        
+        @keyframes me {
+            0% {bottom: 10vh; right: -50vw;}
+            20% {bottom: 10vh; right: 40vw;}
+            40% {bottom: 10vh; right: 40vw;}
+            
+            60% {bottom: -100vh; right: 40vw;}
+            100% {bottom: -100vh; right: -50vw;}
+        }
+        
+        .catch {
+            position: absolute;
+            padding: 15px;
+            border: 3px solid black;
+            height: 220px;
+            width: 200px;
+            background-color: #fff;
+            z-index: 1 ;
+            top: -50vh; left: 0vw;
+            animation: catchme 23s infinite;
+        }
+        
+        @keyframes catchme {
+            0% {top: -50vh; left: 0vw;}
+            60% {top: -50vh; left: 0vw;}
+            65% {top: 0vh; left: 0vw;}
+            70% {top: 20vh; left: 70vw;}
+            75% {top: 50vh; left: 70vw;}
+            80% {top: 50vh; left: 20vw;}
+            85% {top: 50vh; left: 20vw;}
+            90% {top: 70vh; left: 70vw;}
+            95% {top: 0vh; left: 70vw;}
+            100% {top: 0vh; left:  0vw;}
+        }
+        
+        
+        .clouds
+        {
+            position: absolute;
+            padding: 15px;
+            border: 3px solid black;
+            height: 280px;
+            width: 300px;
+            background-color: #fff;
+            z-index: +2 ;
+            bottom: 10vh; right: 50vw;
+            animation: clouds 23s infinite;
+        }
+        
+        .cloud1{position: relative;
+        margin:0px;
+        padding:0px;
+        border:0px;
+        float:left;
+        width:400px;
+        height:300px;
+            top:-110px;
+            left:-200px;
+            
+            animation: cloud1 5s infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes cloud1 {
+            0% { top:-110px; left:-20px;}
+            100%{top:-110px; left:-420px;}
+            
+        }
+        
+        .cloud2{position: relative;
+        margin:0px;
+        padding:0px;
+        border:0px;
+        float:left;
+        width:400px;
+        height:300px;
+            top:-410px;
+            left:200px;
+            
+            animation: cloud2 5s infinite;
+            animation-timing-function: linear;
+        }
+        
+@keyframes cloud2 {
+            0% { top:-410px; left:380px;}
+            100%{top:-410px; left:-20px;}
+            
+        }
+        
+        @keyframes clouds {
+            0% {top: -50vh; right: 50vw;}
+            20% {top: 20vh; right: 50vw;}
+            50% {top: 5vh; right: 50vw;}        
+            80% {top: 5vh; right: -200vw;}
+            100% {top: -50vh; right:  -200vw;}
+        }
+        
+        .plane {position: relative;
+            top: 50px;
+            left: 0px;
+            padding: 0px;
+            border: 0px;
+            height: 100px;
+            width: 100px;
+            font-size: 90px;
+            color:#000;
+            background-color: rgba(255, 255, 255, 0);
+            z-index: +9 ;
+            animation: plane 5s normal;
+        }
+        
+        .plane2{
+         font-size:90px;   
+         color:white;   
+        }
+        
+        
+        
+        .plane1:hover{
+            animation: plane 25s normal;
+        }
+        
+       @keyframes plane {
+            0% {font-size:90px;}
+            10%{font-size:0px;}
+            }
+        
+        
+        
+        .headline{
+            z-index: +9 ;
+            animation: headline 20s infinite;
+        }
+        
+         @keyframes headline {
+            0% {top: -50vh; right: 5vw;}
+            20% {top: 50vh; right: 5vw;}
+            50% {top: 25vh; right: 5vw;}        
+            80% {top: 25vh; right: -200vw;}
+            100% {top: -50vh; right:  -200vw;}
+        }
+        
+        .pos1{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack1 10s normal;
+        }
+        @keyframes posblack1{
+             0%{color:rgb(0, 128, 255);
+            background-color: #fff;}
+            10%{color:rgb(0, 128, 255);}
+            20%{color:rgb(0, 255, 235);}   
+            30%{color:rgb(88, 255, 0);}
+            40%{color:rgb(255, 157, 0);}
+            50%{color:rgb(29, 0, 255);}
+            60%{color:rgb(255, 0, 0);}
+            70%{color:rgb(216, 255, 0);}
+            80%{color:rgb(108, 1, 147);}
+            90%{color: ;}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos1:hover {
+/*            animation ist notwendig, weil die             transition zu langsam ist
+            Trick: das Ende von HOVER stößt die animation an, die sonst nur beim laden der seite abspielt*/
+            
+            animation: pos1color 15s normal;
+        }
+        @keyframes pos1color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos2{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack2 10s normal;
+        }
+        @keyframes posblack2{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(88, 0, 255);}
+            20%{color:rgb(255, 0, 177);}   
+            30%{color:rgb(255, 0, 0);}
+            40%{color:rgb(255, 157, 0);}
+            50%{color:rgb(147, 255, 0);}
+            60%{color:rgb(0, 255, 0);}
+            70%{color:rgb(0, 255, 177);}
+            80%{color:rgb(1, 80, 147);}
+            90%{color:rgb(118, 0, 14);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos2:hover {
+            animation: pos2color 15s normal;
+        }
+        @keyframes pos2color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos3{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack3 10s normal;
+        }
+        @keyframes posblack3{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 196, 0);}
+            20%{color:rgb(88, 255, 0);}   
+            30%{color:rgb(0, 10, 255);}
+            40%{color:rgb(255, 0, 0);}
+            50%{color:rgb(255, 255, 0);}
+            60%{color:rgb(0, 157, 255);}
+            70%{color:rgb(78, 0, 255);}
+            80%{color:rgb(234, 207, 0);}
+            90%{color:rgb(195, 0, 23);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos3:hover {
+            animation: pos3color 15s normal;
+        }
+        @keyframes pos3color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos5{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack5 10s normal;
+        }
+        @keyframes posblack5{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(0, 255, 88);}
+            20%{color:rgb(255, 255, 0);}   
+            30%{color:rgb(255, 49, 0);}
+            40%{color:rgb(255, 0, 137);}
+            50%{color:rgb(59, 0, 255);}
+            60%{color:rgb(0, 255, 216);}
+            70%{color:rgb(49, 255, 0);}
+            80%{color:rgb(234, 90, 0);}
+            90%{color:rgb(195, 0, 0);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos5:hover {
+            animation: pos5color 15s normal;
+        }
+        @keyframes pos5color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+        
+    /* ------------------------------------ */
+        .pos6{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack6 10s normal;
+        }
+        @keyframes posblack6{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 0, 235);}
+            20%{color:rgb(0, 59, 255);}   
+            30%{color:rgb(0, 255, 59);}
+            40%{color:rgb(226, 255, 0);}
+            50%{color:rgb(255, 128, 0);}
+            60%{color:rgb(255, 0, 0);}
+            70%{color:rgb(108, 0, 255);}
+            80%{color:rgb(18, 234, 0);}
+            90%{color:rgb(195, 187, 0);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos6:hover {
+            animation: pos6color 15s normal;
+        }
+        @keyframes pos6color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos7{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack7 10s normal;
+        }
+        @keyframes posblack7{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 157, 0);}
+            20%{color:rgb(216, 255, 0);}   
+            30%{color:rgb(147, 255, 0);}
+            40%{color:rgb(0, 226, 255);}
+            50%{color:rgb(20, 255, 0);}
+            60%{color:rgb(29, 0, 255);}
+            70%{color:rgb(0, 255, 10);}
+            80%{color:rgb(234, 234, 0);}
+            90%{color:rgb(0, 22, 195);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos7:hover {
+            animation: pos7color 15s normal;
+        }
+        @keyframes pos7color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos8{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack8 10s normal;
+        }
+        @keyframes posblack8{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 0, 0);}
+            20%{color:rgb(206, 255, 0);}   
+            30%{color:rgb(255, 0, 216);}
+            40%{color:rgb(255, 196, 0);}
+            50%{color:rgb(0, 255, 39);}
+            60%{color:rgb(255, 0, 235);}
+            70%{color:rgb(29, 255, 0);}
+            80%{color:rgb(0, 234, 207);}
+            90%{color:rgb(255, 0, 137);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos8:hover {
+            animation: pos8color 15s normal;
+        }
+        @keyframes pos8color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos10{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack10 10s normal;
+        }
+        @keyframes posblack10{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(0, 255, 39);}
+            20%{color:rgb(255, 255, 0);}   
+            30%{color:rgb(255, 0, 0);}
+            40%{color:rgb(255, 0, 128);}
+            50%{color:rgb(118, 0, 255);}
+            60%{color:rgb(0, 78, 255);}
+            70%{color:rgb(0, 255, 108);}
+            80%{color:rgb(59, 255, 0);}
+            90%{color:rgb(235, 255, 0);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos10:hover {
+            animation: pos10color 15s normal;
+        }
+        @keyframes pos10color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos11{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack11 10s normal;
+        }
+        @keyframes posblack11{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(49, 0, 255);}
+            20%{color:rgb(245, 0, 255);}   
+            30%{color:rgb(255, 0, 0);}
+            40%{color:rgb(255, 0, 226);}
+            50%{color:rgb(0, 0, 255);}
+            60%{color:rgb(0, 226, 255);}
+            70%{color:rgb(39, 255, 0);}
+            80%{color:rgb(255, 255, 0);}
+            90%{color:rgb(45, 0, 195);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos11:hover {
+            animation: pos11color 15s normal;
+        }
+        @keyframes pos11color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos12{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack12 10s normal;
+        }
+        @keyframes posblack12{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 206, 0);}
+            20%{color:rgb(147, 255, 0);}   
+            30%{color:rgb(0, 255, 206);}
+            40%{color:rgb(255, 0, 0);}
+            50%{color:rgb(29, 255, 0);}
+            60%{color:rgb(226, 255, 0);}
+            70%{color:rgb(255, 0, 216);}
+            80%{color:rgb(234, 234, 0);}
+            90%{color:rgb(0, 195, 30);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos12:hover {
+            animation: pos12color 15s normal;
+        }
+        @keyframes pos12color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos13{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack13 10s normal;
+        }
+        @keyframes posblack13{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 0, 88);}
+            20%{color:rgb(255, 177, 0);}   
+            30%{color:rgb(39, 255, 0);}
+            40%{color:rgb(0, 255, 235);}
+            50%{color:rgb(255, 0, 0);}
+            60%{color:rgb(0, 255, 29);}
+            70%{color:rgb(0, 98, 255);}
+            80%{color:rgb(0, 18, 234);}
+            90%{color:rgb(195, 0, 0);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos13:hover {
+            animation: pos13color 15s normal;
+        }
+        @keyframes pos13color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos14{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack14 10s normal;
+        }
+        @keyframes posblack14{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(0, 255, 10);}
+            20%{color:rgb(0, 255, 177);}   
+            30%{color:rgb(235, 255, 0);}
+            40%{color:rgb(255, 10, 0);}
+            50%{color:rgb(0, 255, 59);}
+            60%{color:rgb(0, 29, 255);}
+            70%{color:rgb(255, 0, 98);}
+            80%{color:rgb(216, 234, 0);}
+            90%{color:rgb(0, 120, 195);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos14:hover {
+            animation: pos14color 15s normal;
+        }
+        @keyframes pos14color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos16{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack16 10s normal;
+        }
+        @keyframes posblack16{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 0, 235);}
+            20%{color:rgb(255, 0, 0);}   
+            30%{color:rgb(216, 255, 0);}
+            40%{color:rgb(255, 0, 245);}
+            50%{color:rgb(255, 128, 0);}
+            60%{color:rgb(49, 0, 255);}
+            70%{color:rgb(0, 245, 255);}
+            80%{color:rgb(0, 103, 24);}
+            90%{color:rgb(56, 2, 142);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos16:hover {
+            animation: pos16color 15s normal;
+        }
+        @keyframes pos16color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos17{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack17 10s normal;
+        }
+        @keyframes posblack17{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(12, 152, 0);}
+            20%{color:rgb(144, 0, 0);}   
+            30%{color:rgb(226, 255, 0);}
+            40%{color:rgb(0, 141, 130);}
+            50%{color:rgb(0, 206, 255);}
+            60%{color:rgb(165, 165, 165);}
+            70%{color:rgb(186, 255, 0);}
+            80%{color:rgb(234, 36, 0);}
+            90%{color:rgb(83, 255, 116);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos17:hover {
+            animation: pos17color 15s normal;
+        }
+        @keyframes pos17color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos19{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack19 10s normal;
+        }
+        @keyframes posblack19{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(39, 0, 255);}
+            20%{color:rgb(0, 226, 255);}   
+            30%{color:rgb(226, 255, 0);}
+            40%{color:rgb(29, 255, 0);}
+            50%{color:rgb(39, 255, 0);}
+            60%{color:rgb(0, 110, 124);}
+            70%{color:rgb(0, 255, 49);}
+            80%{color:rgb(78, 0, 101);}
+            90%{color:rgb(183, 179, 83);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos19:hover {
+            animation: pos19color 15s normal;
+        }
+        @keyframes pos19color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos20{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack20 10s normal;
+        }
+        @keyframes posblack20{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 79, 241);}
+            20%{color:rgb(61, 87, 175);}   
+            30%{color:rgb(0, 159, 37);}
+            40%{color:rgb(181, 98, 0);}
+            50%{color:rgb(0, 26, 167);}
+            60%{color:rgb(255, 37, 37);}
+            70%{color:rgb(0, 62, 178);}
+            80%{color:rgb(255, 0, 0);}
+            90%{color:rgb(15, 0, 195);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos20:hover {
+            animation: pos20color 15s normal;
+        }
+        @keyframes pos20color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }    
+/* ------------------------------------ */
+        .pos21{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack21 10s normal;
+        }
+        @keyframes posblack21{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 206, 0);}
+            20%{color:rgb(147, 255, 0);}   
+            30%{color:rgb(0, 255, 206);}
+            40%{color:rgb(255, 0, 0);}
+            50%{color:rgb(29, 255, 0);}
+            60%{color:rgb(226, 255, 0);}
+            70%{color:rgb(255, 0, 216);}
+            80%{color:rgb(234, 234, 0);}
+            90%{color:rgb(0, 195, 30);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos21:hover {
+            animation: pos21color 15s normal;
+        }
+        @keyframes pos21color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos22{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack22 10s normal;
+        }
+        @keyframes posblack22{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 0, 88);}
+            20%{color:rgb(255, 177, 0);}   
+            30%{color:rgb(39, 255, 0);}
+            40%{color:rgb(0, 255, 235);}
+            50%{color:rgb(255, 0, 0);}
+            60%{color:rgb(0, 255, 29);}
+            70%{color:rgb(0, 98, 255);}
+            80%{color:rgb(0, 18, 234);}
+            90%{color:rgb(195, 0, 0);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos22:hover {
+            animation: pos22color 15s normal;
+        }
+        @keyframes pos22color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos24{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack24 10s normal;
+        }
+        @keyframes posblack24{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(0, 255, 10);}
+            20%{color:rgb(0, 255, 177);}   
+            30%{color:rgb(235, 255, 0);}
+            40%{color:rgb(255, 10, 0);}
+            50%{color:rgb(0, 255, 59);}
+            60%{color:rgb(0, 29, 255);}
+            70%{color:rgb(255, 0, 98);}
+            80%{color:rgb(216, 234, 0);}
+            90%{color:rgb(0, 120, 195);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos24:hover {
+            animation: pos24color 15s normal;
+        }
+        @keyframes pos24color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos25{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack25 10s normal;
+        }
+        @keyframes posblack25{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(255, 0, 235);}
+            20%{color:rgb(255, 0, 0);}   
+            30%{color:rgb(216, 255, 0);}
+            40%{color:rgb(255, 0, 245);}
+            50%{color:rgb(255, 128, 0);}
+            60%{color:rgb(49, 0, 255);}
+            70%{color:rgb(0, 245, 255);}
+            80%{color:rgb(0, 103, 24);}
+            90%{color:rgb(56, 2, 142);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos25:hover {
+            animation: pos25color 15s normal;
+        }
+        @keyframes pos25color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos26{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack26 10s normal;
+        }
+        @keyframes posblack26{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(12, 152, 0);}
+            20%{color:rgb(144, 0, 0);}   
+            30%{color:rgb(226, 255, 0);}
+            40%{color:rgb(0, 141, 130);}
+            50%{color:rgb(0, 206, 255);}
+            60%{color:rgb(165, 165, 165);}
+            70%{color:rgb(186, 255, 0);}
+            80%{color:rgb(234, 36, 0);}
+            90%{color:rgb(83, 255, 116);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos26:hover {
+            animation: pos26color 15s normal;
+        }
+        @keyframes pos26color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+/* ------------------------------------ */
+        .pos27{
+            color:rgb(0, 0, 0);
+            background-color: #fff;
+            transition: color 10s;
+            animation: posblack27 10s normal;
+        }
+        @keyframes posblack27{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            10%{color:rgb(39, 0, 255);}
+            20%{color:rgb(0, 226, 255);}   
+            30%{color:rgb(226, 255, 0);}
+            40%{color:rgb(29, 255, 0);}
+            50%{color:rgb(39, 255, 0);}
+            60%{color:rgb(0, 110, 124);}
+            70%{color:rgb(0, 255, 49);}
+            80%{color:rgb(78, 0, 101);}
+            90%{color:rgb(183, 179, 83);}
+            100%{color:rgb(0, 0, 0);
+            background-color: #fff;}
+        }
+        .pos27:hover {
+            animation: pos27color 15s normal;
+        }
+        @keyframes pos27color{
+            0%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+            100%{color:rgb(0, 108, 255);
+            background-color: #fff;}
+        }
+
+/*===========================================*/
+        .logo{
+            z-index: +4;
+            position: absolute;
+            top: -50vh;
+            left: 5vw;
+            padding: 15px;
+            border: 3px solid black;
+            height: 300px;
+            width: 300px;
+            background-color: #fff;
+/*            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);*/
+            animation: logo 30s infinite;
+        }
+        
+        @keyframes logo {
+            0% {top: -50vh; left: 5vw;}
+            20% {top: 50vh; left: 5vw;}
+            50% {top: 25vh; left: 5vw;}        
+            80% {top: 25vh; left: -200vw;}
+            100% {top: -50vh; left: -200vw;}
+        }
+        
+        img{
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); 
+            box-sizing: border-box;
+            border: 0px solid;
+            border-color: rgba(0, 0, 0, 0.1);
+            border-radius: 0px;
+            padding: 0px;
+            margin: 20px 0px;
+            width: 280px;
+            -webkit-transition: all 1s;
+        }
+        
+        
+        img:hover {
+             -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+            border: 10px solid;
+            border-color: rgba(0, 0, 5, 0.1);
+            border-radius: 0px;
+            padding: 0px;
+            margin: 20px 0px;
+            width: 280px;
+            -webkit-transition: all 2s;
+        }
+        
+        img.sky{
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%); 
+            box-sizing: border-box;
+            border: 0px;
+            border-color: rgba(0, 0, 0, 0);
+            border-radius: 0px;
+            padding: 0px;
+            margin: 0px 0px;
+            width: 400px;
+            height:320px;
+            -webkit-transition: all 1s;
+        }
+        
+        img.sky:hover {
+             -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+            padding: 0px;
+            margin: 0px 0px;
+            width: 400px;
+            height:320px;
+            -webkit-transition: all 2s;}
+        
+        img.spiral{
+            box-sizing: border-box;
+            border: 0px;
+            border-color: rgba(0, 0, 0, 0);
+            border-radius: 0px;
+            padding: 0px;
+            margin: 0px 0px;
+            width: 150px;
+            height:150px;
+            -webkit-transition: all 1s;}
+        
+@keyframes rainbow {
+            0% {
+                background-image: linear-gradient(rgba(180, 74, 147, 0.94), rgb(226, 151, 9), rgb(0, 255, 10));
+            }
+
+            20% {
+                background-image: linear-gradient(rgb(83, 217, 34), rgb(9, 67, 226), rgb(255, 186, 0));
+            }
+
+           40% {
+                background-image: linear-gradient(rgb(230, 38, 31), rgb(201, 226, 9), rgb(0, 245, 255));
+            }
+            60% {
+                background-image: linear-gradient(rgb(217, 34, 203), rgb(99, 133, 227), rgb(137, 0, 255));
+            }
+
+            80% {
+                background-image: linear-gradient(rgb(0, 59, 255), rgb(9, 226, 109), rgb(147, 255, 0));
+            }
+            100% {
+                background-image: linear-gradient(rgba(180, 74, 147, 0.94), rgb(226, 151, 9), rgb(0, 255, 10));
+            }
+
+        }
+        
+        @keyframes mymove {
+            0% {
+                background-color: rgba(1, 1, 1, 0);
+            }
+
+            25% {
+                background-color: rgba(1, 1, 1, 0);
+            }
+
+            50% {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            75% {
+                background-color: rgba(1, 1, 1, 0);
+            }
+
+            100% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+        }
+
+        
+        .checker {
+            padding: 0px;
+            border: 0px solid black;
+            height: 10vh;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: +2;
+
+        }
+        
+
+        .checker:nth-child(even) {
+            background-color: rgba(0, 0, 0, 1);
+/*            background: #fff;*/
+            transition: background 10s;
+            animation: black 5s normal;
+        }
+        @keyframes black{
+            0%{background-color: rgba(0, 0, 0, 0);}
+            100%{background-color: rgba(0, 0, 0, 1);}
+        }
+
+
+        .checker:nth-child(odd) {
+            background-color: rgba(255,255,255, 1);
+/*            background: #000;*/
+            vertical-align: middle;
+            transition: background 10s;
+            animation: white 5s normal;
+        }
+        @keyframes white{
+            0%{background-color: rgba(255, 255, 255, 0);}
+            100%{background: rgba(255, 255, 255, 1);}
+        }
+
+        .checker:hover {
+/*            background: rgba(1, 1, 1, 0);*/
+            animation: mymove 10s infinite;
+        }
+
+
+            
+
+        main {
+            display: grid;
+            grid-gap: 0px;
+            margin: 0p;
+            padding: 0p;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .headline {
+            position: absolute;
+            top: 25vh;
+            right: 50vw;
+            padding: 15px;
+            border: 3px solid black;
+            height: 300px;
+            width: 300px;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-family: 'Caveat', cursive;
+            margin:0px;
+        }
+        h2 {
+            font-size: 20px;
+            font-family: 'Caveat', cursive;
+            margin-top:10px;
+            color:#585858;
+        }
+        h3{
+            margin-bottom: 0px;
+        }
+        p{
+            margin-top: 0px;
+        }
+        
+        span{
+            margin:0px;
+        }
+        
+        
+
+        
+        a:link {color:darkgray}
+a:visited{color:black;}
+a:hover{color:darkturquoise}
+        a:active {color:orangered}
+    </style>
+</head>
+
+<body>
+    <main class="grid-container">
+        <div class="checker" id="box001">
+            
+        </div>
+        <div class="checker" id="box002">
+            
+        </div>
+        <div class="checker" id="box003">
+            
+        </div>
+        <div class="checker" id="box003">
+            
+        </div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+        <div class="checker"></div>
+
+
+    </main>
+    <div class="headline">
+        <h1>
+            <span class="pos1">P</span>
+            <span class="pos2">u</span>
+            <span class="pos3">t</span>
+            <span class="pos4"> </span>
+            <span class="pos5">S</span>
+            <span class="pos6">o</span>
+            <span class="pos7">m</span>
+            <span class="pos8">e</span>
+            <span class="pos9"> </span>
+            <span class="pos10">C</span>
+            <span class="pos11">o</span>
+            <span class="pos12">l</span>
+            <span class="pos13">o</span>
+            <span class="pos14">r</span>
+            <span class="pos15"> </span>
+            <span class="pos16">I</span>
+            <span class="pos17">n</span>
+            <span class="pos18"> </span>
+            <span class="pos19">Y</span>
+            <span class="pos20">o</span>
+            <span class="pos21">u</span>
+            <span class="pos22">r</span>
+            <span class="pos23"> </span>
+            <span class="pos24">L</span>
+            <span class="pos25">i</span>
+            <span class="pos26">v</span>
+            <span class="pos27">e</span>
+        </h1>
+    </div>
+     <div class="logo">
+        <a href="https://digitalcareerinstitute.org/en/"><img src="pics/cropped-Logo_blue.png"></a>
+         <h2>Phone: 030 364286190</h2>
+<p>DCI office, Berlin<br>
+            Vulkanstraße 1, 10367 Berlin</p>
+    </div>
+    
+    <div class="map">
+        <h3>Google Maps</h3>
+      <center>
+          <a href="https://goo.gl/maps/mrdxWSRN5P52"> <img src="pics/map_color.png"></a> </center>
+        
+    </div>
+    
+    <div class="me">
+        <h3>Michael Kobs</h3>
+        <center>
+        <p> <a href="mailto:michakobs@hotmail.com?subject=DCI%20Micropage&body=Nice!" target="_top">mailto: michakobs@hotmail.com</a></p>
+    
+          <a href=""> <img src="pics/photo.png"></a> </center>
+        
+    </div>
+    
+    <div class="clouds">
+         <center>
+         <div class="plane"><span class="plane1">&#9992;</span><span class="plane2">&#10047;</span></div>
+        
+         <div class="cloud1">
+          <img class="sky" src="pics/cute-cartoon-clouds.jpg"></div>
+          <div class="cloud2">
+          <img class="sky" src="pics/cute-cartoon-clouds.jpg"></div>
+          
+          </center>
+        
+    </div>
+    
+       <div class="catch">
+        <h3>You found me!</h3>
+         <center>
+         <div class="spiral">
+          <img class="spiral" src="pics/giphy.gif"/></div>
+             <p>code&amp;design: Michael Kobs</p>
+          </center>
+        
+    </div>
+</body>
+
+</html>
